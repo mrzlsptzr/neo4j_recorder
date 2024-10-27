@@ -1,6 +1,6 @@
 from src import init_db
 from src.services import ServiceFactory
-from src.models import NodeModel, NodeRecord
+from src.models import NodeModel, NodeRecord, RecordedNode
 from pydantic import Field
 from neomodel import StringProperty, IntegerProperty
 
@@ -9,6 +9,9 @@ class PersonModel(NodeModel):
     name: str = Field(..., description="The name of the person")
     age: int
     hair_color: str = Field(..., description="The hair color of the person")
+
+
+class Person(RecordedNode): ...
 
 
 class PersonRecord(NodeRecord):
@@ -20,7 +23,7 @@ class PersonRecord(NodeRecord):
 def main():
 
     # Generating the PersonService through the factory
-    person_service = ServiceFactory.create_service(PersonModel, PersonRecord)
+    person_service = ServiceFactory.create_service(PersonModel, Person, PersonRecord)
 
     # Using the generated service
     person = person_service.create(

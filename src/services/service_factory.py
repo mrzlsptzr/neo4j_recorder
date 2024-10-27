@@ -15,7 +15,7 @@ class ServiceFactory:
     """
 
     @staticmethod
-    def create_service(model_class, record_class):
+    def create_service(model_class, node_class, record_class):
         # Dynamic generation of CRUD models
         create_model = create_entity_create_model(model_class)
         read_model = create_entity_read_model(model_class)
@@ -24,7 +24,7 @@ class ServiceFactory:
         record_read_model = create_record_read_model(model_class)
 
         # Creating the generic repositories
-        class GenericRepository(NodeRepository[create_model, read_model, record_class]):
+        class GenericRepository(NodeRepository[create_model, read_model, node_class]):
             pass
 
         class GenericRecordRepository(
@@ -33,9 +33,7 @@ class ServiceFactory:
             pass
 
         # Creating the generic services
-        class GenericService(
-            RecordedNodeService[model_class, record_class, read_model]
-        ):
+        class GenericService(RecordedNodeService[node_class, record_class, read_model]):
             pass
 
         class GenericRecordService(NodeRecordService[record_read_model]):
@@ -49,7 +47,7 @@ class ServiceFactory:
             repository=record_repository, create_model=record_create_model
         )
 
-        repository = GenericRepository(node_model=model_class, read_model=read_model)
+        repository = GenericRepository(node_model=node_class, read_model=read_model)
         service = GenericService(
             repository=repository,
             record_service=record_service,
