@@ -1,7 +1,7 @@
 from src import init_db
 from src.services import ServiceFactory
 from src.models import NodeModel, NodeRecord
-from pydantic import Field, String
+from pydantic import Field
 from neomodel import StringProperty, IntegerProperty
 
 
