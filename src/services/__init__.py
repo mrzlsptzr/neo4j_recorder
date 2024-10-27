@@ -1,2 +1,3 @@
 from .node_record_service import NodeRecordService
 from .recorded_node_services import RecordedNodeService
+from .service_factory import ServiceFactory
