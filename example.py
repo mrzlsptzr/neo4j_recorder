@@ -2,7 +2,7 @@ from src import init_db
 from src.services import ServiceFactory
 from src.models import NodeModel, NodeRecord, RecordedNode
 from pydantic import Field
-from neomodel import StringProperty, IntegerProperty
+from neomodel import StringProperty, IntegerProperty, db
 
 
 class PersonModel(NodeModel):
@@ -35,5 +35,12 @@ def main():
 
 
 if __name__ == "__main__":
+
+    # Connect to database
     init_db()
+
+    # Reset database
+    db.cypher_query("MATCH (n) DETACH DELETE n")
+
+    # Run example
     main()
