@@ -2,6 +2,8 @@
 
 The neo4j recorder can record changes of nodes and edges.
 
+![neo4j recorder in arrows.app](./doc/arrows.app/neo4j_recorder.svg)
+
 ## Node records
 
 The recorder creates a node record for each change of the node data. The node is connected by a HAS_RECORD relationships to its node records. The node is connected by a HAS_ACTIVE_RECORD relationship to the currently active record node. Each node record has a HAS_PREVIOUS_RECORD relationship to its previous record node.
