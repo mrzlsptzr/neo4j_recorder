@@ -42,3 +42,10 @@ class RecordedNode(RecorderNode):
     active_record = RelationshipTo(
         NodeRecord, "HAS_ACTIVE_RECORD", model=HasActiveRecord
     )
+
+
+class EdgeRecord(RecorderNode):
+    operation = StringProperty(required=True)
+    previous = RelationshipFrom(
+        "EdgeRecord", "HAS_PREVIOUS_RECORD", model=HasPreviousRecord
+    )
