@@ -203,7 +203,7 @@ def create_record_read_model(model: NodeModel):
     return create_model(f"{model.__name__}RecordRead", **fields, __config__=Config)
 
 
-class EdgeModel:
+class EdgeModel(BaseModel):
     uuid: UUID
     created_at: datetime
 
