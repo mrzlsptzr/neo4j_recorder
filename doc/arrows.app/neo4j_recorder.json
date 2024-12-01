@@ -1,0 +1,311 @@
+{
+  "style": {
+    "font-family": "sans-serif",
+    "background-color": "#ffffff",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#ffffff",
+    "border-width": 4,
+    "border-color": "#000000",
+    "radius": 50,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#000000",
+    "caption-font-size": 50,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "pill",
+    "label-color": "#000000",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 4,
+    "label-font-size": 40,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 5,
+    "arrow-color": "#000000",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#000000",
+    "type-background-color": "#ffffff",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 16,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#000000",
+    "property-font-size": 16,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": 227.00037724743905,
+        "y": -498
+      },
+      "caption": "Recorded Node",
+      "style": {},
+      "labels": [
+        "Person"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": 702,
+        "y": -498
+      },
+      "caption": "NodeRecord",
+      "style": {
+        "caption-color": "#0062b1",
+        "node-color": "#73d8ff",
+        "border-color": "#0062b1"
+      },
+      "labels": [],
+      "properties": {}
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": 702,
+        "y": -138.43933054393307
+      },
+      "caption": "NodeRecord",
+      "style": {
+        "node-color": "#73d8ff",
+        "border-color": "#0062b1",
+        "caption-color": "#0062b1"
+      },
+      "labels": [],
+      "properties": {}
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 702,
+        "y": 221.12133891213387
+      },
+      "caption": "NodeRecord",
+      "style": {
+        "node-color": "#73d8ff",
+        "caption-color": "#0062b1",
+        "border-color": "#0062b1"
+      },
+      "labels": [],
+      "properties": {}
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": -327.95583507816275,
+        "y": -498
+      },
+      "caption": "Recorded Node",
+      "style": {},
+      "labels": [
+        "Person"
+      ],
+      "properties": {}
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": -24.19197594309395,
+        "y": -138.43933054393307
+      },
+      "caption": "EdgeRecord",
+      "style": {
+        "border-color": "#68bc00",
+        "node-color": "#a4dd00",
+        "caption-color": "#194d33"
+      },
+      "labels": [],
+      "properties": {}
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": -24.19197594309395,
+        "y": 221.12133891213387
+      },
+      "caption": "EdgeRecord",
+      "labels": [],
+      "properties": {},
+      "style": {
+        "border-color": "#68bc00",
+        "node-color": "#a4dd00",
+        "caption-color": "#194d33"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "HAS_ACTIVE_RECORD",
+      "style": {
+        "arrow-color": "#fa28ff",
+        "type-color": "#fa28ff"
+      },
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n1"
+    },
+    {
+      "id": "n1",
+      "type": "HAS_PREVIOUS_RECORD",
+      "style": {
+        "arrow-color": "#0062b1",
+        "type-color": "#0062b1"
+      },
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n2"
+    },
+    {
+      "id": "n2",
+      "type": "HAS_PREVIOUS_RECORD",
+      "style": {
+        "arrow-color": "#0062b1",
+        "type-color": "#0062b1"
+      },
+      "properties": {},
+      "fromId": "n2",
+      "toId": "n3"
+    },
+    {
+      "id": "n3",
+      "type": "HAS_RECORD",
+      "style": {
+        "arrow-color": "#73d8ff",
+        "type-color": "#009ce0"
+      },
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n2"
+    },
+    {
+      "id": "n4",
+      "type": "HAS_RECORD",
+      "style": {
+        "arrow-color": "#73d8ff",
+        "type-color": "#009ce0"
+      },
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n3"
+    },
+    {
+      "id": "n5",
+      "type": "HAS_RECORD",
+      "style": {
+        "arrow-color": "#73d8ff",
+        "type-color": "#009ce0"
+      },
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n1"
+    },
+    {
+      "id": "n6",
+      "type": "{RELATIONSHIP}",
+      "style": {},
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n4"
+    },
+    {
+      "id": "n7",
+      "type": "HAS_PREVIOUS_RECORD",
+      "style": {
+        "arrow-color": "#68bc00",
+        "type-color": "#194d33"
+      },
+      "properties": {},
+      "toId": "n6",
+      "fromId": "n5"
+    },
+    {
+      "id": "n8",
+      "type": "{RELATIONSHIP}__RECORDED_BY",
+      "style": {
+        "arrow-color": "#a4dd00",
+        "type-color": "#68bc00"
+      },
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n6"
+    },
+    {
+      "id": "n9",
+      "type": "{RELATIONSHIP}__RECORDED_BY",
+      "style": {
+        "arrow-color": "#a4dd00",
+        "type-color": "#68bc00"
+      },
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n5"
+    },
+    {
+      "id": "n10",
+      "type": "RECORDS__{RELATIONSHIP}",
+      "style": {
+        "arrow-color": "#a4dd00",
+        "type-color": "#68bc00"
+      },
+      "properties": {},
+      "fromId": "n5",
+      "toId": "n4"
+    },
+    {
+      "id": "n11",
+      "type": "RECORDS__{RELATIONSHIP}",
+      "style": {
+        "arrow-color": "#a4dd00",
+        "type-color": "#68bc00"
+      },
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n4"
+    },
+    {
+      "id": "n12",
+      "type": "{RELATIONSHIP}__ACTIVELY_RECORDED_BY",
+      "style": {
+        "arrow-color": "#fa28ff",
+        "type-color": "#fa28ff"
+      },
+      "properties": {},
+      "fromId": "n0",
+      "toId": "n6"
+    },
+    {
+      "id": "n13",
+      "type": "ACTIVLEY_RECORDS__{RELATIONSHIP}",
+      "style": {
+        "arrow-color": "#fa28ff",
+        "type-color": "#fa28ff"
+      },
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n4"
+    }
+  ]
+}
